@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OTPActivity">
+    tools:context=".SendOTPActivity">
 
-    <TextView
-        android:id="@+id/otpText"
+    <EditText
+        android:id="@+id/phoneText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="85dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="OTP"
+        android:hint="Phone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,7 +24,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="66dp"
         android:text="Verify"
+        android:onClick="onClickVerify"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/otpText" />
+        app:layout_constraintTop_toBottomOf="@+id/phoneText" />
 </android.support.constraint.ConstraintLayout>

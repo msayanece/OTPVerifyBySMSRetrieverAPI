@@ -30,6 +30,6 @@ import retrofit2.http.Url;
 
 public interface Service {
     @GET
-    Call<Response> GroupNameList(@Url String url);
+    Call<GeneralResponse> sendOTPRnD(@Url String url);
 }
 
