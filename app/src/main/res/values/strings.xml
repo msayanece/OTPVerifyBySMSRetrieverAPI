@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">New Way OTP Verify</string>
+    <string name="base_url_myjson">https://api.myjson.com</string>
+    <string name="base_url">https://desideals.co.in</string>
+</resources>
