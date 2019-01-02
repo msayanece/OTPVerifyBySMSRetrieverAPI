@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.google.android.gms.auth.api.phone.SmsRetriever;
 import com.google.android.gms.common.api.CommonStatusCodes;
@@ -22,6 +23,7 @@ public class MySMSBroadcastReceiver extends BroadcastReceiver {
                 case CommonStatusCodes.SUCCESS:
                     // Get SMS message contents
                     String message = (String) extras.get(SmsRetriever.EXTRA_SMS_MESSAGE);
+                    Toast.makeText(context, "OTP: " + message, Toast.LENGTH_SHORT).show();
                     // Extract one-time code from the message and complete verification
                     Log.e("onReceive OTP: ", message);
                     break;

@@ -101,14 +101,14 @@ public class SendOTPActivity extends AppCompatActivity implements GoogleApiClien
         if (s.isEmpty()) {
             Toast.makeText(this, "Please enter your phone number.", Toast.LENGTH_SHORT).show();
         } else {
-            sendOTP();
+            sendOTP(s);
         }
     }
 
-    private void sendOTP() {
+    private void sendOTP(String phoneNumber) {
         InterceptorHTTPClientCreator.createInterceptorHTTPClient(getApplicationContext());
         Service service = new NewWayOTPVerifySdk.Builder().build(getApplicationContext()).getService();
-        service.sendOTPRnD("https://desideals.co.in/App/user/process.comn.php?act=sendOTPRnD&deviceId=1")
+        service.sendOTPRnD("https://desideals.co.in/App/user/process.comn.php?act=sendOTPRnD&deviceId=1&mobile="+ phoneNumber)
                 .enqueue(new Callback<GeneralResponse>() {
             @Override
             public void onResponse(Call<GeneralResponse> call, Response<GeneralResponse> response) {
